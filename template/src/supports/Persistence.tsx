@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { NavLink, NavLinkProps, useLocation, useSearchParams } from "react-router-dom";
 import { useAppSelector } from "../app/hooks"
 import { RootState } from "../app/store";
 
@@ -22,4 +22,12 @@ export function PersistSelectedStates({ children }: Props) {
   }, [setSearchParams, searchParams, count])
 
   return (<> { children } </>)
+}
+
+export function NavLinkPersist(props: NavLinkProps ) {
+  const { search } = useLocation()
+
+  return (<>
+    <NavLink {...{...props, to: `${props.to}${search}`}}>{ props.children }</NavLink>
+  </>)
 }
