@@ -5,8 +5,8 @@
       "build": "react-scripts build",
       "test": "react-scripts test",
       "eject": "react-scripts eject",
-      "lint": "eslint template/src --ext .js,.ts",
-      "lint:fix": "eslint template/src --fix --ext .js,.ts,.jsx,.tsx"
+      "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
+      "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx"
     },
     "dependencies": {
       "@reduxjs/toolkit": "^1.8.5",
