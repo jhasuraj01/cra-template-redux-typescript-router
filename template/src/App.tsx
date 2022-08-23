@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-import { Route, Routes } from 'react-router';
-import { Page1 } from './pages/page1';
-import { Page2 } from './pages/page2';
-import { Page3 } from './pages/page3';
-import { Home } from './pages/home';
-import { Nav } from './components/Nav';
+import logo from './logo.svg'
+import { Counter } from './features/counter/Counter'
+import './App.css'
+import { Route, Routes } from 'react-router'
+import { Page1 } from './pages/page1'
+import { Page2 } from './pages/page2'
+import { Page3 } from './pages/page3'
+import { Home } from './pages/home'
+import { Nav } from './components/Nav'
 
 function App() {
   return (
@@ -66,7 +66,7 @@ function App() {
         </Routes>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

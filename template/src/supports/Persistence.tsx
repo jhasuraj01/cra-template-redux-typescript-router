@@ -1,15 +1,15 @@
-import { useEffect } from "react";
-import { NavLink, NavLinkProps, useLocation, useSearchParams } from "react-router-dom";
-import { useAppSelector } from "../app/hooks"
-import { RootState } from "../app/store";
+import React, { useEffect } from 'react'
+import { NavLink, NavLinkProps, useLocation, useSearchParams } from 'react-router-dom'
+import { useAppSelector } from '../app/hooks'
+import { RootState } from '../app/store'
 
 interface Props {
   children: React.ReactNode
 }
 
 export function PersistSelectedStates({ children }: Props) {
-  const state = useAppSelector((state: RootState) => state);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const state = useAppSelector((state: RootState) => state)
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const count = String(state.counter.value)
 

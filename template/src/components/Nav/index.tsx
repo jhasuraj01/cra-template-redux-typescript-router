@@ -1,11 +1,11 @@
-import { NavLinkPersist } from '../../supports/Persistence';
-import style from './nav.module.scss';
+import { NavLinkPersist } from '../../supports/Persistence'
+import style from './nav.module.scss'
 
 export function Nav() {
 
   const className = ({ isActive }: { isActive: boolean }) => {
-    return `${isActive ? style.active : ''} ${style.link}`;
-  };
+    return `${isActive ? style.active : ''} ${style.link}`
+  }
 
   return (
     <nav>
@@ -14,5 +14,5 @@ export function Nav() {
       <NavLinkPersist className={className} to='/page2'>Page 2</NavLinkPersist>
       <NavLinkPersist className={className} to='/page3'>Page 3</NavLinkPersist>
     </nav>
-  );
+  )
 }
