@@ -8,10 +8,8 @@ interface Props {
 }
 
 export function PersistSelectedStates({ children }: Props) {
-  const state = useAppSelector((state: RootState) => state)
+  const count = useAppSelector((state: RootState) => state.counter.value)
   const [searchParams, setSearchParams] = useSearchParams()
-
-  const count = String(state.counter.value)
 
   useEffect(() => {
 
